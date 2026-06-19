@@ -2,12 +2,12 @@ package org.medium;
 
 public class QuickSort {
 
-    public static int[] sortArray(int[] nums) {
+    private static int[] sortArray(int[] nums) {
         quickSort(nums, 0, nums.length-1);
         return nums;
     }
 
-    public static void quickSort(int[] nums, int low, int high) {
+    private static void quickSort(int[] nums, int low, int high) {
         if(low<high) {
             int p = partition(nums, low, high);
 
@@ -16,7 +16,7 @@ public class QuickSort {
         }
     }
 
-    public static int partition(int[] nums, int low, int high) {
+    private static int partition(int[] nums, int low, int high) {
         int pivot = nums[high];
         int i = low-1;
 
@@ -31,7 +31,7 @@ public class QuickSort {
         return i;
     }
 
-    public static void swap(int[] nums, int i, int j) {
+    private static void swap(int[] nums, int i, int j) {
         int temp = nums[i];
         nums[i] = nums[j];
         nums[j] = temp;
